@@ -3,7 +3,7 @@
     "dependencies": ["dependabot", "dependency", "dependencies"],
     "security": ["dependabot", "dependency", "dependencies", "security"],
     "ui/ux": ["layout", "screen", "design", "figma"],
-    "good-first-issue": ["dependabot", "dependency", "dependencies", "security", "layout", "screen", "design", "figma"] 
+    "good first issue": [] 
   },
   "defaultLabels": ["unapproved"]
 }
