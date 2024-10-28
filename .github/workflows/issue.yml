@@ -23,7 +23,7 @@ jobs:
           sparse-checkout: |
             .github/workflows/auto-label.json5
           sparse-checkout-cone-mode: false
-      - uses: Renato66/auto-label@v2.3.0
+      - uses: Renato66/auto-label@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
   
