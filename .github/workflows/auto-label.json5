@@ -1,9 +1,13 @@
 {
   "labelsSynonyms": {
     "dependencies": ["dependabot", "dependency", "dependencies"],
-    "security": ["dependabot", "dependency", "dependencies","security"],
+    "security": ["security"],
     "ui/ux": ["layout", "screen", "design", "figma"],
     "good first issue": [] 
   },
-  "defaultLabels": ["unapproved"]
+  "defaultLabels": ["unapproved"],
+  "assignWhen": {
+    "good first issue": ["dependencies", "security", "ui/ux"]  
+  }
+
 }
