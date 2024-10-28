@@ -22,12 +22,12 @@ jobs:
         with:
           sparse-checkout: |
             .github/workflows/auto-label.json5
+            # .github/workflows/auto-label.jsonc
+            # .github/workflows/auto-label.json
           sparse-checkout-cone-mode: false
       - uses: Renato66/auto-label@v2.3.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          ignore-comments: true
-          default-labels: '["unapproved"]'
   
   Issue-Greeting:
     name: Greeting Message to User
