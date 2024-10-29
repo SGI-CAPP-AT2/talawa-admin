@@ -31,10 +31,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          script:
-            // Check if "Feature" label exists, if so add "Needs Design" label
-            if (issue.labels.some(label => label.name === 'security')) 
-              github.issues.addLabels(issue.number, ['good first issue']);
+          script: |
+            issue.labels.forEach(label=>console.log(label.name))
             
   
   Issue-Greeting:
