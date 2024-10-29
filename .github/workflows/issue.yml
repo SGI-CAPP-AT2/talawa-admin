@@ -22,10 +22,22 @@ jobs:
         with:
           sparse-checkout: |
             .github/workflows/auto-label.json5
+            .
           sparse-checkout-cone-mode: false
       - uses: Renato66/auto-label@v3
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/github-script@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          script:
+            << EOF
+            // Check if "Feature" label exists, if so add "Needs Design" label
+            if (issue.labels.some(label => label.name === 'security')) {
+              github.issues.addLabels(issue.number, ['good first issue']);
+            }
+            EOF
   
   Issue-Greeting:
     name: Greeting Message to User
