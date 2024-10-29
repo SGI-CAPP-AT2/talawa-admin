@@ -32,12 +32,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script:
-            << EOF
             // Check if "Feature" label exists, if so add "Needs Design" label
-            if (issue.labels.some(label => label.name === 'security')) {
+            if (issue.labels.some(label => label.name === 'security')) 
               github.issues.addLabels(issue.number, ['good first issue']);
-            }
-            EOF
+            
   
   Issue-Greeting:
     name: Greeting Message to User
